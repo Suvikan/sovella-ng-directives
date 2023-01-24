@@ -4,17 +4,16 @@
     justify-content: center;
 }
 
-.clickscounter {
-    background-color: fff;
-    font-size: 20px;
-    margin-top: 1rem;
-}
-
 .text {
     font-size: 16px;
     background-color: rgb(186, 186, 186);
+    border-radius: 5px;
     padding: 1rem;
     margin: 1rem auto;
     max-width: 600px;
+}
+
+.margin {
+   margin: 1rem 0.5rem 0.7rem 0.5rem;
 }
 

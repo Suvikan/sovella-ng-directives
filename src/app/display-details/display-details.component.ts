@@ -8,18 +8,19 @@ import { Component } from '@angular/core';
 export class DisplayDetailsComponent {
   showMe:boolean = false;
   numberOfClicks: number = 0;
-  listOfClicks: any = [];
-  
+  //listOfClicks: any = [];
+  listOfClicks: Date[] = [];
+
   ngOnInit(): void{}
 
    clickCount() {
     this.numberOfClicks++;
-    this.listOfClicks.push(this.numberOfClicks);
+    //this.listOfClicks.push(this.numberOfClicks);
+    this.listOfClicks.push(new Date());
         }
 
-  getColor() {
-    return this.numberOfClicks >= 5 ? 'black' : 'white';
-        }
+  
+    
   
   constructor() {}      
 }
