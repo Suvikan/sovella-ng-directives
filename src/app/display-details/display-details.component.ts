@@ -6,13 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./display-details.component.css']
 })
 export class DisplayDetailsComponent {
-  show = false;
-  buttonClicked = false;
-  count: number = 0; 
+  showMe:boolean = false;
+  numberOfClicks: number = 0;
+  listOfClicks: any = [];
   
-   clickCount(): void{
-        this.count++
+  ngOnInit(): void{}
+
+   clickCount() {
+    this.numberOfClicks++;
+    this.listOfClicks.push(this.numberOfClicks);
         }
+
+  getColor() {
+    return this.numberOfClicks >= 5 ? 'black' : 'white';
+        }
+  
+  constructor() {}      
 }
 
 
