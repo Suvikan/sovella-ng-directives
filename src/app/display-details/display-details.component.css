@@ -1,0 +1,19 @@
+* {
+    display: grid;
+    align-self: center;
+    justify-content: center;
+}
+
+.clickscounter {
+    background-color: fff;
+    font-size: 20px;
+}
+
+.text {
+    font-size: 16px;
+    background-color: rgb(186, 186, 186);
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
