@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class DisplayDetailsComponent {
   showMe:boolean = false;
   numberOfClicks: number = 0;
-  //listOfClicks: any = [];
-  listOfClicks: Date[] = [];
+  listOfClicks: any = [];
+  //listOfClicks: Date[] = [];
 
   ngOnInit(): void{}
 
    clickCount() {
     this.numberOfClicks++;
-    //this.listOfClicks.push(this.numberOfClicks);
-    this.listOfClicks.push(new Date());
+    this.listOfClicks.push(this.numberOfClicks);
+    //this.listOfClicks.push(new Date());
         }
 
   
