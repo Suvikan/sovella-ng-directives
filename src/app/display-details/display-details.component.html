@@ -1,19 +1,32 @@
 <section class="wrap">
     
     <p>Sovella NG Directives -tehtävä!</p>
-    <button class="btn btn-warning" (click)="showMe = !showMe" (click)="clickCount()">Display details</button>
+    <button class="btn-oma btn btn-warning" (click)="showMe = !showMe" (click)="clickCount()">Display details</button>
 
     <p *ngIf="showMe" class="text">Tämä kappale sisältää salaista tietoa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quisquam quae quis optio, in praesentium expedita esse nisi. Eius quam consectetur praesentium sunt officiis fuga iste. Maxime exercitationem numquam dignissimos.</p>
 
-     <div *ngFor="let click of listOfClicks" [ngStyle]="{'background-color' : click >= 5 ? 'black' : 'white' }">
+    <!-- <div *ngFor="let click of listOfClicks" [ngStyle]="{'background-color' : click >= 5 ? 'black' : 'white' }">
         <p [ngClass]="{'text-white': click >= 5}" class="margin">
             {{ click }}
         </p>
-    </div>
+    </div>-->
     
-    <!-- <div *ngFor="let date of listOfClicks" [ngStyle]="{'background-color' : listOfClicks.length >= 5 ? 'black' : 'white' }">
-        <p [ngClass]="{'text-white': listOfClicks.length >= 5}" class="margin">
+   <!-- <div *ngFor="let date of listOfDates" [ngStyle]="{'background-color' : numberOfClicks >= 5 ? 'black' : 'white' }">
+        <p [ngClass]="{'text-white': numberOfClicks >= 5}" class="margin">
             {{ date }}
         </p>
     </div> -->
+
+   <!-- <div *ngFor="let date of listOfDates" [ngStyle]="{'background-color' : numberOfClicks >= 5 ? 'black' : 'white' }">
+        <p [ngClass]="{'text-white': numberOfClicks >= 5}" class="margin">
+            {{ date }}
+        </p>
+    </div> -->
+
+    <div *ngFor="let click of listOfClicks" [ngStyle]="{'background-color' : click >= 5 ? 'black' : 'white' }">
+        <p [ngClass]="{'text-white': click >= 5}" class="margin">
+            {{ listOfDates[-1 + click] }}
+        </p>
+    </div>
+  
 </section>

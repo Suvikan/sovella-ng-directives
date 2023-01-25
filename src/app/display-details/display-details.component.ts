@@ -10,6 +10,7 @@ export class DisplayDetailsComponent {
   numberOfClicks: number = 0;
   listOfClicks: any = [];
   //listOfClicks: Date[] = [];
+  listOfDates: Date[] = [];
 
   ngOnInit(): void{}
 
@@ -17,6 +18,7 @@ export class DisplayDetailsComponent {
     this.numberOfClicks++;
     this.listOfClicks.push(this.numberOfClicks);
     //this.listOfClicks.push(new Date());
+    this.listOfDates.push(new Date());
         }
 
   

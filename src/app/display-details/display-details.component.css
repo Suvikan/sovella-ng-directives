@@ -1,6 +1,11 @@
 * {
     display: grid;
-    justify-content: center;
+    justify-items: center;
+}
+
+.oma-btn {
+    display: inline-block;
+    
 }
 
 .text {
